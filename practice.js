@@ -24,14 +24,14 @@ const newGreeting = function (name) {
 //Rewrite the function greeting as an arrow function.
 //Name it finalGreeting.
 
-//Code Here
+const finalGreeting = (name) => `Hello, ${name}`;
 
 //////////////////PROBLEM 4////////////////////
 
 //Create an array called groceries with the values
 //"apples", "milk", "eggs", "bread"
 
-let groceries = ["apples", "milk", "eggs", "bread"]
+let groceries = ["apples", "milk", "eggs", "bread"];
 
 //Write a function called doubleCheck that takes in an array
 //as a parameter.
@@ -39,7 +39,11 @@ let groceries = ["apples", "milk", "eggs", "bread"]
 //If the array does not contain "chocolate", add "chocolate".
 //doubleCheck should return the array.
 
-//Code Here
+function doubleCheck(arr) {
+  if (arr.includes("chocolate") === false) {
+    arr.push("chocolate");
+  }
+}
 
 //////////////////PROBLEM 5////////////////////
 
@@ -48,7 +52,12 @@ let groceries = ["apples", "milk", "eggs", "bread"]
 //name (a string), color: (a string), age (a number),
 //and goodBoy (a boolean).
 
-//Code Here
+const dog = {
+  name: "",
+  color: "",
+  age: "",
+  goodBoy: ""
+}
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
