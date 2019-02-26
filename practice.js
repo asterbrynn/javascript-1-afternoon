@@ -41,7 +41,8 @@ let groceries = ["apples", "milk", "eggs", "bread"];
 
 function doubleCheck(arr) {
   if (arr.includes("chocolate") === false) {
-    arr.push("chocolate");
+    let newArr = arr.push("chocolate");
+    return newArr;
   }
 }
 
@@ -53,25 +54,28 @@ function doubleCheck(arr) {
 //and goodBoy (a boolean).
 
 const dog = {
-  name: "",
-  color: "",
-  age: "",
-  goodBoy: ""
+  name: "Wedge",
+  color: "black and white",
+  age: 2,
+  goodBoy: true
 }
 
 //...access the dog's name from the object and assign it to a
 //variable called devMountainClassPet.
 
-//Code Here
+let devMountainClassPet = dog.name;
 
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
-//Code Here
+function bark() {
+  return "Woof woof";
+}
+dog.bark = bark();
 
 //Store the result of invoking the bark method in a variable called ruff.
 
-//Code Here
+const ruff = dog.bark;
 
 //////////////////PROBLEM 6////////////////////
 
@@ -97,12 +101,14 @@ function math(num1, num2, callback) {
 //Write a function called add that takes in two parameters and
 //returns the result of adding them together.
 
-//Code Here
+function add(num1, num2) {
+  return num1 + num2;
+}
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
-//Code Here
+let mathSum = math(3, 4, add(3, 4));
 
 //////////////////PROBLEM 8////////////////////
 
