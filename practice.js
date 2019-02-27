@@ -41,8 +41,8 @@ let groceries = ["apples", "milk", "eggs", "bread"];
 
 function doubleCheck(arr) {
   if (!arr.includes("chocolate")) {
-    const newArr = arr.push("chocolate");
-    return newArr;
+    arr.push("chocolate");
+    return arr;
   }
 }
 
@@ -131,7 +131,7 @@ function sampleCallbackTwo() {
 }
 
 function invoker(callback) {
-  return callback;
+  return callback();
 }
 
 //////////////////PROBLEM 9////////////////////
@@ -172,12 +172,16 @@ let pondScope = ["duck", "realDuck"];
 //Create a function called outerFn which returns an anonymous
 //function which returns your name.
 
-//Code Here
+function outerFn(){
+  return  function () {
+    return "Aster Brynn";
+  }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-//Code Here
+let innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
-//Code Here
+let finalResult = innerFn();
